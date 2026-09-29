@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <title>Assistências | Itechub</title>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="index.html"><img class="logo" src="img/itechhub-logo.png" alt="Itechub"></a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="site-menu" class="site-nav" aria-label="Navegação principal">
+
+      <ul class="menu">
+        <li><a href="index.html"> Início </a></li>
+
+        <li class="dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Categorias <i
+              class="fa-solid fa-chevron-down"></i> 
+          </button>
+          <ul class="submenu">
+            <li><a href="lojascadastradas.html?categoria=Celulares">Celulares</a></li>
+            <li><a href="lojascadastradas.html?categoria=Computadores">Computadores</a></li>
+            <li><a href="lojascadastradas.html?categoria=Notebooks">Notebooks</a></li>
+            <li><a href="lojascadastradas.html?categoria=Videogames">Videogames</a></li>
+            <li><a href="lojascadastradas.html?categoria=Tablets">Tablets</a></li>
+            <li><a href="lojascadastradas.html?categoria=Outros">Outros</a></li>
+          </ul>
+        </li>
+
+        <li><a href="lojascadastradas.html">Assistências</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="empresa-login.html">Para empresas</a></li>
+        <li class="mobile-login"><a href="login.html">Entrar / Cadastrar</a></li>
+      </ul>
+    </nav>
+
+    <a href="login.html" class="btn-entrar desktop-login">Entrar</a>
+
+  </header>
+
+  <main class="page">
+
+    <section class="simple-hero">
+
+      <h1>Encontre uma assistência</h1>
+      <p>Compare empresas, avaliações, localização e especialidades antes de escolher.</p>
+
+    </section>
+
+    <section class="directory">
+
+      <form class="search-box" action="lojascadastradas.html" style="max-width:850px">
+        <input type="search" placeholder="Pesquisar por serviço ou equipamento">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <div class="filters">
+
+        <button class="filter is-active" type="button" data-filter="Todos">Todos</button>
+        <button class="filter" type="button" data-filter="Celulares">📱 Celulares</button>
+        <button class="filter" type="button" data-filter="Computadores">💻 Computadores</button>
+        <button class="filter" type="button" data-filter="Notebooks">💻 Notebooks</button>
+        <button class="filter" type="button" data-filter="Videogames">🎮 Videogames</button>
+        <button class="filter" type="button" data-filter="Tablets">📱 Tablets</button>
+
+      </div>
+
+      <div class="directory-grid">
+
+        <article class="info-lojas" data-categories="Celulares Tablets Telas">
+          <div class="store-cover"><img src="img/smart-fix.png" alt="SmartFix"></div>
+
+          <div class="store-body">
+
+            <div class="store-title">
+              <h3>SmartFix</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+
+            <div class="rating">⭐ <strong>4,7</strong> · 128 avaliações</div>
+            <div class="localizacao">📍 Planaltina, DF</div>
+            <div class="tags">
+              <span class="tag">Celulares</span>
+              <span class="tag">Tablets</span>
+              <span class="tag">Telas</span>
+            </div>
+
+            <a class="btn-perfil" href="#" onclick="abrirAssistencia('smartfix'); return false;">Ver perfil</a>
+          </div>
+        </article>
+
+        <article class="info-lojas" data-categories="Celulares Smartphones Software Manutenção">
+          <div class="store-cover"><img src="img/the-off.png" alt="The OFF"></div>
+
+          <div class="store-body">
+        
+            <div class="store-title">
+              <h3>The OFF</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+
+            <div class="rating">⭐ <strong>4,8</strong> · 96 avaliações</div>
+            <div class="localizacao">📍 Setor Comercial Sul, DF</div>
+            <div class="tags">
+              <span class="tag">Smartphones</span>
+              <span class="tag">Software</span>
+            </div>
+
+            <a class="btn-perfil" href="#" onclick="abrirAssistencia('theoff'); return false;">Ver perfil</a>
+          </div>
+        </article>
+
+        <article class="info-lojas" data-categories="Celulares Telas Acessórios">
+          <div class="store-cover"><img src="img/smartphone.png" alt="SmartPhone"></div>
+
+          <div class="store-body">
+            <div class="store-title">
+              <h3>SmartPhone</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+
+            <div class="rating">⭐ <strong>4,9</strong> · 154 avaliações</div>
+            <div class="localizacao">📍 Setor Comercial Norte, DF</div>
+            <div class="tags">
+              <span class="tag">Celulares</span>
+              <span class="tag">Telas</span>
+            </div>
+
+            <a class="btn-perfil" href="#" onclick="abrirAssistencia('smartphone'); return false;">Ver perfil</a>
+          </div>
+        </article>
+
+        <article class="info-lojas" data-categories="Computadores Notebooks Hardware">
+          <div class="store-cover"><img src="img/concert-pro.png" alt="Concert PRO"></div>
+
+          <div class="store-body">
+
+            <div class="store-title">
+              <h3>Concert PRO</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+
+            <div class="rating">⭐ <strong>5,0</strong> · 72 avaliações</div>
+            <div class="localizacao">📍 Taguatinga, DF</div>
+            <div class="tags">
+              <span class="tag">Computadores</span>
+              <span class="tag">Notebooks</span>
+            </div>
+
+            <a class="btn-perfil" href="#" onclick="abrirAssistencia('concertpro'); return false;">Ver perfil</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="direitos-footer">© 2026 Itechub. Projeto acadêmico demonstrativo.</p>
+  </footer>
+
+  <div class="assist-modal" id="assistencia-modal" aria-hidden="true">
+
+    <div class="assist-modal-backdrop" onclick="fecharAssistencia()"></div>
+
+    <div class="assist-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-nome">
+
+      <button class="assist-modal-close" type="button" aria-label="Fechar"
+        onclick="fecharAssistencia()">&times;
+      </button>
+
+      <div class="assist-modal-header">
+
+        <div class="assist-modal-brand"><img id="modal-logo" src="" alt=""></div>
+
+        <div>
+          <div class="modal-kicker" id="modal-verificada">✓ VERIFICADA</div>
+          <h2 id="modal-nome">Assistência</h2>
+          <p id="modal-local">📍 —</p>
+          <div class="modal-rating" id="modal-rating">⭐ —</div>
+        </div>
+      </div>
+
+      <div class="assist-modal-grid">
+
+        <section class="modal-section">
+          <h3>Especialidades</h3>
+          <div class="modal-tags" id="modal-tags"></div>
+          <h3>Serviços</h3>
+          <ul class="modal-services" id="modal-servicos"></ul>
+        </section>
+
+        <aside class="modal-side">
+
+          <div class="modal-info"><span>🕒</span>
+            <div><strong>Horário</strong>
+              <p id="modal-horario">—</p>
+            </div>
+          </div>
+
+          <div class="modal-info"><span>💬</span>
+            <div><strong>Avaliações</strong>
+              <p id="modal-avaliacoes">—</p>
+            </div>
+          </div>
+
+          <div class="modal-info"><span>📍</span>
+            <div><strong>Localização</strong>
+              <p id="modal-endereco">—</p>
+            </div>
+          </div>
+
+          <a class="modal-contact" id="modal-contato" href="#">Entrar em contato</a>
+        </aside>
+      </div>
+
+      <div class="modal-reviews" id="modal-reviews"></div>
+    </div>
+  </div>
+
+  <script src="JavaScript/assistencias.js"></script>
+
+  <script>
+    (function () {
+      const params = new URLSearchParams(location.search);
+      const requested = params.get('categoria');
+      const cards = [...document.querySelectorAll('.directory-grid .info-lojas')];
+      const buttons = [...document.querySelectorAll('.filter')];
+      function applyFilter(filter) {
+        cards.forEach(card => {
+          const cats = (card.dataset.categories || '').toLowerCase();
+          card.style.display = (filter === 'Todos' || cats.includes(filter.toLowerCase())) ? '' : 'none';
+        });
+        buttons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.filter === filter));
+      }
+      buttons.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+      applyFilter(requested || 'Todos');
+    })();
+  </script>
+
+  <script src="JavaScript/site.js"></script>
+
+</body>
+</html>

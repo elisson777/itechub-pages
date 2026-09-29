@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <title>Entrar ou cadastrar | Itechub</title>
+</head>
+
+<body class="auth-page">
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html"><img class="logo" src="img/itechhub-logo.png" alt="Itechub"></a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="site-menu" class="site-nav" aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="lojascadastradas.html">Assistências</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="empresa-login.html">Para empresas</a></li>
+      </ul>
+    </nav>
+
+    <a href="lojascadastradas.html" class="btn-entrar desktop-login">Encontrar assistência</a>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-shell-v9" id="user-auth" data-mode="signup">
+
+      <div class="auth-form-view auth-signup-form">
+
+        <div class="auth-form-content">
+
+          <img class="auth-logo" src="img/itechhub-logo.png" alt="Itechub">
+
+          <h1>Criar uma conta</h1>
+          <p class="auth-subtitle">Cadastre-se para encontrar e acompanhar suas assistências.</p>
+
+          <div class="social-auth">
+
+            <button type="button" aria-label="Continuar com Google"><i class="fa-brands fa-google"></i></button>
+            <button type="button" aria-label="Continuar com Facebook"><i class="fa-brands fa-facebook-f"></i></button>
+
+          </div>
+
+          <span class="auth-or">ou use seu e-mail</span>
+
+          <form action="index.html" class="auth-form">
+
+            <label>
+              <i class="fa-regular fa-user"></i>
+              <input type="text" placeholder="Nome completo" autocomplete="name" required>
+            </label>
+
+            <label>
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="E-mail" autocomplete="email" required>
+            </label>
+
+            <label>
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Senha" autocomplete="new-password" required>
+            </label>
+
+            <button class="auth-primary" type="submit">Cadastrar</button>
+
+          </form>
+
+          <p class="auth-mobile-switch">Já tem cadastro? <button type="button" data-auth-mode="signin">Entrar</button></p>
+        </div>
+      </div>
+
+      <div class="auth-form-view auth-signin-form">
+
+        <div class="auth-form-content">
+
+          <img class="auth-logo" src="img/itechhub-logo.png" alt="Itechub">
+
+          <h1>Entrar</h1>
+          <p class="auth-subtitle">Acesse sua conta Itechub.</p>
+
+          <div class="social-auth">
+
+            <button type="button" aria-label="Continuar com Google"><i class="fa-brands fa-google"></i></button>
+            <button type="button" aria-label="Continuar com Facebook"><i class="fa-brands fa-facebook-f"></i></button>
+
+          </div>
+
+          <span class="auth-or">ou use sua conta de e-mail</span>
+
+          <form action="index.html" class="auth-form">
+
+            <label>
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="E-mail" autocomplete="email" required>
+            </label>
+
+            <label>
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Senha" autocomplete="current-password" required>
+            </label>
+
+            <a class="forgot-password" href="#">Esqueci minha senha</a>
+
+            <button class="auth-primary" type="submit">Entrar</button>
+
+          </form>
+
+          <p class="auth-mobile-switch">Ainda não tem cadastro? <button type="button" data-auth-mode="signup">Criar conta</button></p>
+        </div>
+      </div>
+
+      <div class="auth-slider">
+
+        <div class="auth-slider-content auth-slider-signup">
+
+          <span class="auth-badge"><i class="fa-solid fa-handshake"></i> Itechub</span>
+
+          <h2>Já tem cadastro?</h2>
+          <p>Bem-vindo de volta! Entre na sua conta para continuar sua jornada.</p>
+
+          <button class="auth-outline" type="button" data-auth-mode="signin">Entrar</button>
+        </div>
+
+        <div class="auth-slider-content auth-slider-signin">
+
+          <span class="auth-badge"><i class="fa-solid fa-mobile-screen-button"></i> Sua tecnologia, mais simples</span>
+
+          <h2>Olá, amigo!</h2>
+          <p>Crie sua conta e encontre assistências confiáveis para seus equipamentos.</p>
+
+          <button class="auth-outline" type="button" data-auth-mode="signup">Criar conta</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="JavaScript/site.js"></script>
+</body>
+</html>

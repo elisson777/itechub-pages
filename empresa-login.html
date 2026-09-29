@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <title>Área da empresa | Itechub</title>
+</head>
+
+<body class="auth-page company-auth-page">
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html"><img class="logo" src="img/itechhub-logo.png" alt="Itechub"></a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu"> 
+    <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="site-menu" class="site-nav" aria-label="Navegação principal">
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="lojascadastradas.html">Assistências</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="empresa-login.html">Para empresas</a></li>
+      </ul>
+    </nav>
+
+    <a href="lojascadastradas.html" class="btn-entrar desktop-login">Encontrar assistência</a>
+
+  </header>
+
+  <main class="auth-main">
+
+    <section class="auth-shell-v9 company-auth-shell" id="company-auth" data-mode="signup">
+
+      <div class="auth-form-view auth-signup-form">
+
+        <div class="auth-form-content">
+
+          <span class="company-kicker"> <i class="fa-solid fa-building"></i> Área da empresa</span>
+
+          <h1>Cadastrar assistência</h1>
+
+          <p class="auth-subtitle">Crie o perfil da sua empresa e seja encontrado por novos clientes.</p>
+
+          <form action="index.html" class="auth-form company-form">
+            <div class="company-form-grid">
+
+              <label>
+                <i class="fa-solid fa-store"></i>
+                <input type="text" placeholder="Nome da assistência" autocomplete="organization" required> 
+              </label>
+
+              <label>
+                <i class="fa-solid fa-id-card"></i>
+                <input type="text" placeholder="CNPJ" inputmode="numeric" required>
+              </label>
+
+              <label><i class="fa-regular fa-user"></i>
+                <input type="text" placeholder="Nome do responsável" autocomplete="name" required>
+              </label>
+
+              <label>
+                <i class="fa-solid fa-phone"></i>
+                <input type="tel" placeholder="Telefone" autocomplete="tel" required>
+              </label>
+
+              <label class="full">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="E-mail profissional" autocomplete="email" required>
+              </label>
+
+              <label class="full">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Crie uma senha" autocomplete="new-password" required>
+              </label>
+
+            </div>
+
+            <button class="auth-primary" type="submit">Cadastrar empresa</button>
+
+          </form>
+
+          <p class="auth-mobile-switch">Já possui uma conta empresarial? 
+          <button type="button" data-company-mode="signin">Entrar</button></p>
+
+        </div>
+      </div>
+
+      <div class="auth-form-view auth-signin-form">
+
+        <div class="auth-form-content">
+
+          <span class="company-kicker"> <i class="fa-solid fa-building"> </i> Área da empresa</span>
+
+          <h1>Entrar como empresa</h1>
+
+          <p class="auth-subtitle">Acesse seu painel e gerencie o perfil da sua assistência.</p>
+
+          <form action="index.html" class="auth-form company-form">
+
+            <label>
+              <i class="fa-regular fa-envelope"></i>
+              <input type="email" placeholder="E-mail profissional" autocomplete="email" required>
+            </label>
+
+            <label>
+              <i class="fa-solid fa-lock"></i>
+              <input type="password" placeholder="Senha" autocomplete="current-password" required>
+              </label>
+
+            <a class="forgot-password" href="#">Esqueci minha senha</a>
+
+            <button class="auth-primary" type="submit">Entrar</button>
+
+          </form>
+
+          <p class="auth-mobile-switch">Ainda não possui cadastro? <button type="button" data-company-mode="signup">Cadastrar empresa</button></p>
+
+        </div>
+      </div>
+
+      <div class="auth-slider">
+
+        <div class="auth-slider-content auth-slider-signup">
+
+          <span class="auth-badge"> <i class="fa-solid fa-store"> </i> Para empresas</span>
+
+          <h2>Já possui cadastro?</h2>
+
+          <p>Entre na sua conta para atualizar serviços, informações e acompanhar seus contatos.</p>
+
+          <button class="auth-outline" type="button" data-company-mode="signin">Entrar</button>
+
+        </div>
+
+        <div class="auth-slider-content auth-slider-signin">
+
+          <span class="auth-badge"><i class="fa-solid fa-chart-line"></i> Cresça com o Itechub</span>
+
+          <h2>Cadastre sua assistência</h2>
+
+          <p>Apresente seus serviços, receba avaliações e seja encontrado por clientes que precisam de ajuda.</p>
+
+          <button class="auth-outline" type="button" data-company-mode="signup">Criar cadastro</button>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="JavaScript/site.js"></script>
+</body>
+</html>

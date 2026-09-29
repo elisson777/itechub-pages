@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="img/itechhub-logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+  <title>Itechub | Encontre sua assistência técnica</title>
+</head>
+
+<body>
+  <!-- Felipe -->
+
+  <header class="site-header">
+
+    <a class="brand" href="index.html"><img class="logo" src="img/itechhub-logo.png" alt="Itechub"></a>
+
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav id="site-menu" class="site-nav" aria-label="Navegação principal">
+
+      <ul class="menu">
+        <li><a href="index.html">Início</a></li>
+
+        <li class="dropdown">
+          <button class="dropdown-toggle" type="button" aria-expanded="false">Categorias <i
+              class="fa-solid fa-chevron-down"></i></button>
+          <ul class="submenu">
+            <li><a href="lojascadastradas.html?categoria=Celulares">Celulares</a></li>
+            <li><a href="lojascadastradas.html?categoria=Computadores">Computadores</a></li>
+            <li><a href="lojascadastradas.html?categoria=Notebooks">Notebooks</a></li>
+            <li><a href="lojascadastradas.html?categoria=Videogames">Videogames</a></li>
+            <li><a href="lojascadastradas.html?categoria=Tablets">Tablets</a></li>
+            <li><a href="lojascadastradas.html?categoria=Outros">Outros</a></li>
+          </ul>
+        </li>
+        <li><a href="lojascadastradas.html">Assistências</a></li>
+        <li><a href="quem-somos.html">Quem somos</a></li>
+        <li><a href="index.html#como-funciona">Como funciona</a></li>
+        <li><a href="empresa-login.html">Para empresas</a></li>
+        <li class="mobile-login"><a href="login.html">Entrar / Cadastrar</a></li>
+      </ul>
+
+    </nav>
+
+    <a href="login.html" class="btn-entrar desktop-login">Entrar</a>
+  </header>
+
+  <main>
+
+  <!-- Seção 1 Banner - Felipe -->
+
+    <section class="banner">
+
+      <div class="conteudo-banner">
+        <div class="eyebrow"><i class="fa-solid fa-location-dot"></i> Assistências técnicas em um só lugar</div>
+        <h1>Seu eletrônico quebrou?<br><span>Encontre</span>, compare e conserte.</h1>
+        <p>Descubra assistências técnicas, compare avaliações e escolha quem vai cuidar do seu equipamento.</p>
+
+        <form class="search-box" action="lojascadastradas.html"><input type="search" name="q"
+            placeholder="Ex.: troca de tela, notebook, celular..." aria-label="Pesquisar assistência"><button
+            type="submit">Buscar assistência</button></form>
+      </div>
+
+    </section>
+
+  <!-- Seção 2 Assistências em destaque - Thiago -->
+
+    <section class="section section-dark" id="assistencias">
+
+      <div class="section-head">
+        <div>
+          <h2>Assistências em destaque</h2>
+          <p>Encontre empresas avaliadas e compare opções antes de entrar em contato.</p>
+        </div><a class="text-link" href="lojascadastradas.html">Ver todas →</a>
+      </div>
+
+      <div class="lojas">
+
+        <article class="info-lojas">
+          <div class="store-cover"><img src="img/smart-fix.png" alt="SmartFix"></div>
+
+          <div class="store-body">
+            <div class="store-title">
+              <h3>SmartFix</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+            <div class="rating">⭐ <strong>4,7</strong> · 128 avaliações</div>
+            <div class="localizacao">📍 Planaltina, DF</div>
+            <div class="tags"><span class="tag">Celulares</span><span class="tag">Tablets</span></div><a
+              class="btn-perfil" href="#" onclick="abrirAssistencia('smartfix'); return false;">Ver assistência</a>
+          </div>
+        </article>
+
+        <article class="info-lojas">
+
+          <div class="store-cover"><img src="img/the-off.png" alt="The OFF"></div>
+
+          <div class="store-body">
+            <div class="store-title">
+              <h3>The OFF</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+            <div class="rating">⭐ <strong>4,8</strong> · 96 avaliações</div>
+            <div class="localizacao">📍 Setor Comercial Sul, DF</div>
+            <div class="tags"><span class="tag">Smartphones</span><span class="tag">Software</span></div><a
+              class="btn-perfil" href="#" onclick="abrirAssistencia('theoff'); return false;">Ver assistência</a>
+          </div>
+        </article>
+
+        <article class="info-lojas">
+
+          <div class="store-cover"><img src="img/smartphone.png" alt="SmartPhone"></div>
+
+          <div class="store-body">
+            <div class="store-title">
+              <h3>SmartPhone</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+            <div class="rating">⭐ <strong>4,9</strong> · 154 avaliações</div>
+            <div class="localizacao">📍 Setor Comercial Norte, DF</div>
+            <div class="tags"><span class="tag">Celulares</span><span class="tag">Telas</span></div><a
+              class="btn-perfil" href="#" onclick="abrirAssistencia('smartphone'); return false;">Ver assistência</a>
+          </div>
+
+        </article>
+
+        <article class="info-lojas">
+          <div class="store-cover"><img src="img/concert-pro.png" alt="Concert PRO"></div>
+
+          <div class="store-body">
+            <div class="store-title">
+              <h3>Concert PRO</h3><span class="verified">✓ VERIFICADA</span>
+            </div>
+            <div class="rating">⭐ <strong>5,0</strong> · 72 avaliações</div>
+            <div class="localizacao">📍 Taguatinga, DF</div>
+            <div class="tags"><span class="tag">Computadores</span><span class="tag">Notebooks</span></div><a
+              class="btn-perfil" href="#" onclick="abrirAssistencia('concertpro'); return false;">Ver assistência</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção 3 Assistências perto de você - Elissom -->
+
+    <section class="section-assistencias-proximas" id="assistencias-proximas">
+
+      <div class="titulo-assistencias-proximas">
+        <h2>Assistências perto de você</h2>
+        <p>Encontre assistências técnicas próximas e localize-as no mapa.</p>
+      </div>
+
+      <div class="area-assistencias">
+        <div class="mapa-container">
+          <div class="cabecalho-mapa">
+            <div>
+              <h3><i class="fa-solid fa-location-dot"></i> Lojas no mapa</h3>
+              <p>Clique em uma assistência para localizá-la.</p>
+            </div>
+            <button id="btn-localizacao" type="button">
+              <i class="fa-solid fa-location-crosshairs"></i> Minha localização
+            </button>
+          </div>
+          <div id="map"></div>
+        </div>
+
+        <div class="lista-assistencias">
+          <div class="filtros-assistencias">
+            <button class="filtro-assistencia ativo" type="button" data-regiao="todos">Todas</button>
+            <button class="filtro-assistencia" type="button" data-regiao="asa-sul">Asa Sul</button>
+            <button class="filtro-assistencia" type="button" data-regiao="paranoa">Paranoá</button>
+          </div>
+          <div id="store-list"></div>
+        </div>
+      </div>
+    </section>
+
+  <!-- Seção 4 Como funciona? - Davi -->
+
+    <section id="como-funciona" class="guia">
+
+      <div class="section-head">
+        <div>
+          <h2>Como funciona?</h2>
+          <p>Uma jornada simples, inspirada na lógica dos grandes marketplaces: pesquisar, comparar e escolher.</p>
+        </div>
+      </div>
+
+      <div class="etapas">
+        <div class="etapa"> <i class="fa-solid fa-magnifying-glass"></i>
+          <h3>1 — Pesquise</h3>
+          <p>Busque pelo aparelho, serviço ou problema que você precisa resolver.</p>
+        </div>
+
+        <div class="etapa"> <i class="fa-solid fa-scale-balanced"></i>
+          <h3>2 — Compare</h3>
+          <p>Analise avaliações, localização, especialidades e informações da assistência.</p>
+        </div>
+
+        <div class="etapa"> <i class="fa-solid fa-store"></i>
+          <h3>3 — Descubra</h3>
+          <p>Veja as opções e encontre a assistência que melhor atende sua necessidade.</p>
+        </div>
+
+        <div class="etapa"> <i class="fa-solid fa-phone"></i>
+          <h3>4 — Entre em contato</h3>
+          <p>Fale diretamente com a assistência e combine o atendimento.</p>
+        </div>
+      </div>
+
+    </section>
+
+  <!-- Seção 5 Ainda com alguma dúvida? - Wesley -->
+
+    <section id="duvidas">
+
+      <h2>Ainda com alguma dúvida?</h2>
+      <p>As respostas mais comuns sobre a Itechub.</p>
+
+      <div class="faq-grid">
+        <details>
+          <summary>É gratuito para encontrar assistências? <i class="fa-solid fa-angle-down"></i></summary>
+          <p>Sim. A pesquisa e a comparação de assistências são gratuitas para o cliente.</p>
+        </details>
+
+        <details>
+          <summary>As assistências são verificadas? <i class="fa-solid fa-angle-down"></i></summary>
+          <p>O protótipo prevê um processo de verificação cadastral antes de destacar uma empresa como verificada.</p>
+        </details>
+
+        <details>
+          <summary>Como funcionam as avaliações? <i class="fa-solid fa-angle-down"></i></summary>
+          <p>Após um atendimento, o usuário pode avaliar a experiência. A nota ajuda outras pessoas a comparar opções.
+          </p>
+        </details>
+
+        <details>
+          <summary>Quais serviços posso encontrar? <i class="fa-solid fa-angle-down"></i></summary>
+          <p>Celulares, notebooks, computadores, videogames, tablets e outros equipamentos de tecnologia.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="stats">
+
+      <div class="stat"><i class="fa-solid fa-store"></i><strong>+800</strong><span>Assistências cadastradas</span>
+      </div>
+
+      <div class="stat"><i class="fa-solid fa-magnifying-glass"></i><strong>+5 mil</strong><span>Pesquisas
+          realizadas</span></div>
+      <div class="stat"><i class="fa-solid fa-map-location-dot"></i><strong>+12</strong><span>Cidades atendidas</span>
+      </div>
+
+      <div class="stat"><i class="fa-solid fa-star"></i><strong>4,8</strong><span>Nota média</span></div>
+    </section>
+
+    <section class="section articles">
+
+      <div class="section-head">
+        <div>
+          <h2>Dicas e artigos</h2>
+          <p>Conteúdo para ajudar você a entender melhor seus equipamentos e tomar decisões.</p>
+        </div>
+      </div>
+
+      <div class="cards_Dicas">
+
+        <article class="cards_Dicas_Artigos"><img src="img/cell_Quebrado_Dicas_Artigos.png" class="imagem_Artigos" alt="Tela de celular quebrada">
+
+          <div class="article-body">
+            <h4 class="title_Card">Como saber se vale a pena trocar a tela do celular?</h4><a class="link_Artigo"
+              href="https://gabrielcomputadores.com.br/artigos/quando-trocar-tela-celular.html" target="_blank"
+              rel="noopener">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="cards_Dicas_Artigos"><img src="img/cell_Descarrega_Assistencia.png" class="imagem_Artigos" alt="Celular descarregando">
+
+          <div class="article-body">
+            <h4 class="title_Card">Celular descarregando rápido? Veja as principais causas.</h4><a class="link_Artigo"
+              href="https://www.avast.com/pt-br/c-why-is-my-battery-draining-so-fast" target="_blank" rel="noopener">Ler
+              artigo →</a>
+          </div>
+        </article>
+
+        <article class="cards_Dicas_Artigos"><img src="img/otimizar_Dicas_Artigos.png" class="imagem_Artigos" alt="Computador">
+
+          <div class="article-body">
+            <h4 class="title_Card">Como otimizar o seu Notebook ou PC?</h4><a class="link_Artigo"
+              href="https://www.hp.com/br-pt/tech-takes/desktops/guias-passo-a-passo/como-melhorar-desempenho-pc-5-passos.html"
+              target="_blank" rel="noopener">Ler artigo →</a>
+          </div>
+        </article>
+
+        <article class="cards_Dicas_Artigos"><img src="img/concerto_Dicas_Artigos.png" class="imagem_Artigos" alt="Assistência técnica">
+
+          <div class="article-body">
+            <h4 class="title_Card">Como escolher uma assistência confiável?</h4><a class="link_Artigo"
+              href="https://blog.reclameaqui.com.br/como-escolher-uma-assistencia-tecnica-confiavel-para-seu-eletrodomestico/"
+              target="_blank" rel="noopener">Ler artigo →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="empresas" class="tem_Uma_Assistencia"><img src="img/img_TemUma_Assistencia.png" alt="Assistência técnica">
+
+      <div class="chamada_Acao">
+        <h2>Tem uma <span>assistência técnica?</span></h2>
+        <p>Cadastre sua empresa, destaque seus serviços e seja encontrado por clientes que já estão procurando uma
+          solução.</p><a class="cta" href="empresa-login.html">Cadastrar minha assistência</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+
+    <div class="footer-grid">
+
+      <div class="footer-brand"><img class="logo" src="img/itechhub-logo.png" alt="Itechub">
+        <p>A plataforma que conecta clientes a assistências técnicas, facilitando a pesquisa, comparação e escolha.</p>
+        
+        <div class="icones-sociais">
+          <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/?size=100&id=84884&format=png&color=FFFFFF" alt="Instagram"></a>
+
+          <a href="#" aria-label="WhatsApp"><img src="https://img.icons8.com/?size=100&id=84937&format=png&color=FFFFFF" alt="WhatsApp"></a>
+          
+          <a href="mailto:contato@itechub.com" aria-label="E-mail"><img src="https://img.icons8.com/?size=100&id=85467&format=png&color=FFFFFF" alt="E-mail"></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+
+        <h3>Empresa</h3>
+
+        <ul>
+          <li><a href="quem-somos.html">Quem somos</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#assistencias">Assistências</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h3>Para empresas</h3>
+
+        <ul>
+          <li><a href="empresa-login.html">Cadastrar assistência</a></li>
+          <li><a href="empresa-login.html">Planos</a></li>
+          <li><a href="#duvidas">Perguntas</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h3>Legal</h3>
+
+        <ul>
+          <li><a href="#">Termos de uso</a></li>
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Cookies</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h3>Suporte</h3>
+
+        <ul>
+          <li><a href="#duvidas">Central de ajuda</a></li>
+          <li><a href="mailto:contato@itechub.com">Fale conosco</a></li>
+          <li><a href="#">Denúncias</a></li>
+        </ul>
+
+      </div>
+    </div>
+
+    <p class="direitos-footer">© 2026 Itechub. Projeto acadêmico demonstrativo.</p>
+
+  </footer>
+
+
+ <!-- HTML Modal/POPUP das lojas-->
+
+  <div class="assist-modal" id="assistencia-modal" aria-hidden="true">
+
+    <div class="assist-modal-backdrop" onclick="fecharAssistencia()"></div>
+
+    <div class="assist-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-nome">
+
+      <button class="assist-modal-close" type="button" aria-label="Fechar" onclick="fecharAssistencia()">&times;</button>
+
+      <div class="assist-modal-header">
+
+        <div class="assist-modal-brand"><img id="modal-logo" src="" alt=""></div>
+
+        <div>
+          <div class="modal-kicker" id="modal-verificada">✓ VERIFICADA</div>
+          <h2 id="modal-nome">Assistência</h2>
+          <p id="modal-local">📍 —</p>
+          <div class="modal-rating" id="modal-rating">⭐ —</div>
+        </div>
+
+      </div>
+
+      <div class="assist-modal-grid">
+
+        <section class="modal-section">
+
+          <h3>Especialidades</h3>
+    
+          <div class="modal-tags" id="modal-tags"></div>
+
+          <h3>Serviços</h3>
+
+          <ul class="modal-services" id="modal-servicos"></ul>
+        </section>
+
+        <aside class="modal-side">
+
+          <div class="modal-info"><span>🕒</span>
+            <div><strong>Horário</strong>
+              <p id="modal-horario">—</p>
+            </div>
+          </div>
+
+          <div class="modal-info"><span>💬</span>
+            <div><strong>Avaliações</strong>
+              <p id="modal-avaliacoes">—</p>
+            </div>
+          </div>
+
+          <div class="modal-info"><span>📍</span>
+            <div><strong>Localização</strong>
+              <p id="modal-endereco">—</p>
+            </div>
+          </div>
+
+          <a class="modal-contact" id="modal-contato" href="#">Entrar em contato</a>
+        </aside>
+
+      </div>
+
+      <div class="modal-reviews" id="modal-reviews"></div>
+    </div>
+
+  </div>
+
+  <script src="JavaScript/assistencias.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="JavaScript/mapa.js"></script>
+
+  <script src="JavaScript/site.js"></script>
+
+</body>
+</html>
