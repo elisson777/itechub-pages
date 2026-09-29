@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#151925">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+  <title>Painel da empresa | Itechub</title>
+</head>
+<body class="crm-page">
+  <header class="crm-topbar">
+    <a class="crm-brand" href="index.html" aria-label="Itechub, página inicial">
+      <img src="img/itechub-logo.png" alt="Itechub">
+      <span>PAINEL DA EMPRESA</span>
+    </a>
+    <div class="crm-topbar-actions">
+      <a class="crm-public-link" href="lojascadastradas.html"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Ver diretório</a>
+      <span class="crm-user" id="crm-user-name"></span>
+      <button class="crm-icon-button" id="crm-logout" type="button" aria-label="Sair da conta" title="Sair">
+        <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="crm-layout">
+    <aside class="crm-sidebar" aria-label="Navegação do painel">
+      <p class="crm-sidebar-label">GESTÃO</p>
+      <a class="crm-side-link is-active" href="#overview"><i class="fa-solid fa-chart-pie" aria-hidden="true"></i> Visão geral</a>
+      <a class="crm-side-link" href="#contacts"><i class="fa-solid fa-address-book" aria-hidden="true"></i> Contatos</a>
+      <a class="crm-side-link" href="#company-profile"><i class="fa-solid fa-store" aria-hidden="true"></i> Perfil da assistência</a>
+      <div class="crm-sidebar-note">
+        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+        <span>Este painel salva os registros neste navegador. Eles não são sincronizados entre dispositivos.</span>
+      </div>
+    </aside>
+
+    <div class="crm-content">
+      <section class="crm-overview" id="overview">
+        <div class="crm-page-heading">
+          <div>
+            <p class="crm-eyebrow">CENTRAL DE ATENDIMENTO</p>
+            <h1 id="crm-company-title">Visão geral</h1>
+            <p class="crm-heading-copy">Organize os contatos recebidos e acompanhe cada atendimento.</p>
+          </div>
+          <button class="crm-primary-button" type="button" data-open-lead>
+            <i class="fa-solid fa-plus" aria-hidden="true"></i> Adicionar contato
+          </button>
+        </div>
+
+        <div class="crm-stats" aria-label="Resumo dos contatos">
+          <article class="crm-stat crm-stat-total">
+            <span class="crm-stat-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></span>
+            <div><p>Total de contatos</p><strong id="crm-stat-total">0</strong></div>
+          </article>
+          <article class="crm-stat crm-stat-new">
+            <span class="crm-stat-icon"><i class="fa-solid fa-inbox" aria-hidden="true"></i></span>
+            <div><p>Novos</p><strong id="crm-stat-new">0</strong></div>
+          </article>
+          <article class="crm-stat crm-stat-scheduled">
+            <span class="crm-stat-icon"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span>
+            <div><p>Agendados</p><strong id="crm-stat-scheduled">0</strong></div>
+          </article>
+          <article class="crm-stat crm-stat-completed">
+            <span class="crm-stat-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+            <div><p>Concluídos</p><strong id="crm-stat-completed">0</strong></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="crm-section" id="contacts">
+        <div class="crm-section-heading">
+          <div>
+            <p class="crm-eyebrow">RELACIONAMENTO</p>
+            <h2>Contatos e atendimentos</h2>
+          </div>
+          <label class="crm-search">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <input id="crm-search" type="search" placeholder="Buscar contato ou serviço" aria-label="Buscar contato ou serviço">
+          </label>
+        </div>
+
+        <div class="crm-filters" role="group" aria-label="Filtrar contatos por situação">
+          <button class="crm-filter is-active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="crm-filter" type="button" data-filter="novo" aria-pressed="false">Novos</button>
+          <button class="crm-filter" type="button" data-filter="em-contato" aria-pressed="false">Em contato</button>
+          <button class="crm-filter" type="button" data-filter="agendado" aria-pressed="false">Agendados</button>
+          <button class="crm-filter" type="button" data-filter="concluido" aria-pressed="false">Concluídos</button>
+        </div>
+
+        <div class="crm-table-wrap">
+          <table class="crm-table">
+            <thead>
+              <tr>
+                <th scope="col">Cliente</th>
+                <th scope="col">Serviço</th>
+                <th scope="col">Contato</th>
+                <th scope="col">Recebido em</th>
+                <th scope="col">Situação</th>
+                <th scope="col"><span class="visually-hidden">Ações</span></th>
+              </tr>
+            </thead>
+            <tbody id="crm-leads" aria-live="polite"></tbody>
+          </table>
+        </div>
+        <p class="crm-storage-note"><i class="fa-solid fa-lock" aria-hidden="true"></i> Os registros são privados deste navegador e não são enviados a um servidor.</p>
+      </section>
+
+      <section class="crm-section crm-profile-section" id="company-profile">
+        <div class="crm-section-heading">
+          <div>
+            <p class="crm-eyebrow">PRESENÇA NO ITECHUB</p>
+            <h2>Perfil da assistência</h2>
+          </div>
+          <button class="crm-secondary-button" type="button" data-open-profile><i class="fa-solid fa-pen" aria-hidden="true"></i> Editar dados</button>
+        </div>
+        <div class="crm-profile-summary">
+          <span class="crm-profile-mark"><i class="fa-solid fa-store" aria-hidden="true"></i></span>
+          <div class="crm-profile-copy">
+            <h3 id="crm-profile-name"></h3>
+            <p id="crm-profile-location">Localização ainda não informada</p>
+            <p id="crm-profile-about"></p>
+            <div class="crm-service-list" id="crm-profile-services"></div>
+          </div>
+          <a class="crm-public-link crm-preview-link" href="lojascadastradas.html"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Abrir diretório</a>
+        </div>
+        <p class="crm-profile-note">As alterações ficam salvas neste navegador. A publicação e sincronização do perfil exigem uma versão com servidor.</p>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="crm-dialog" id="crm-lead-dialog" aria-labelledby="crm-lead-title">
+    <form class="crm-dialog-form" id="crm-lead-form">
+      <div class="crm-dialog-heading">
+        <div><p class="crm-eyebrow">NOVO REGISTRO</p><h2 id="crm-lead-title">Adicionar contato</h2></div>
+        <button class="crm-icon-button crm-dialog-close" type="button" data-close-dialog aria-label="Fechar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+      <label>Nome do cliente<input name="name" autocomplete="name" required maxlength="80"></label>
+      <label>Telefone ou e-mail<input name="contact" autocomplete="email" required maxlength="120"></label>
+      <label>Serviço solicitado<input name="service" placeholder="Ex.: troca de tela" required maxlength="100"></label>
+      <label>Situação
+        <select name="status">
+          <option value="novo">Novo</option>
+          <option value="em-contato">Em contato</option>
+          <option value="agendado">Agendado</option>
+          <option value="concluido">Concluído</option>
+        </select>
+      </label>
+      <div class="crm-dialog-actions">
+        <button class="crm-secondary-button" type="button" data-close-dialog>Cancelar</button>
+        <button class="crm-primary-button" type="submit"><i class="fa-solid fa-check" aria-hidden="true"></i> Salvar contato</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="crm-dialog" id="crm-profile-dialog" aria-labelledby="crm-profile-title">
+    <form class="crm-dialog-form" id="crm-profile-form">
+      <div class="crm-dialog-heading">
+        <div><p class="crm-eyebrow">DADOS DA EMPRESA</p><h2 id="crm-profile-title">Editar perfil</h2></div>
+        <button class="crm-icon-button crm-dialog-close" type="button" data-close-dialog aria-label="Fechar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+      </div>
+      <label>Nome da assistência<input name="companyName" required maxlength="80"></label>
+      <label>Telefone<input name="phone" type="tel" maxlength="30"></label>
+      <label>Cidade e UF<input name="location" placeholder="Ex.: Brasília, DF" maxlength="80"></label>
+      <label>Apresentação<textarea name="about" rows="3" maxlength="280"></textarea></label>
+      <label>Serviços (separados por vírgula)<textarea name="services" rows="3" placeholder="Troca de tela, manutenção de computadores" maxlength="300"></textarea></label>
+      <div class="crm-dialog-actions">
+        <button class="crm-secondary-button" type="button" data-close-dialog>Cancelar</button>
+        <button class="crm-primary-button" type="submit"><i class="fa-solid fa-check" aria-hidden="true"></i> Salvar perfil</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="JavaScript/site.js"></script>
+  <script src="JavaScript/empresa-crm.js"></script>
+</body>
+</html>

@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showMessage(form, "Empresa cadastrada com sucesso! Redirecionando...", "success");
 
         setTimeout(() => {
-          window.location.href = "index.html";
+          window.location.href = "empresa-crm.html";
         }, 700);
 
       } else {
@@ -465,7 +465,7 @@ document.addEventListener("DOMContentLoaded", () => {
         showMessage(form, "Login da empresa realizado! Redirecionando...", "success");
 
         setTimeout(() => {
-          window.location.href = "index.html";
+          window.location.href = "empresa-crm.html";
         }, 500);
       }
     });
@@ -534,12 +534,19 @@ document.addEventListener("DOMContentLoaded", () => {
         ? "Área da empresa"
         : `Olá, ${session.name.split(" ")[0]}`;
 
-      desktopLogin.href = "index.html#conta";
+      desktopLogin.href = session.type === "company" ? "empresa-crm.html" : "index.html#conta";
       desktopLogin.classList.add("session-action");
       desktopLogin.setAttribute("title", "Sessão ativa");
     }
 
     if (menu) {
+      if (session.type === "company") {
+        const dashboardItem = document.createElement("li");
+        dashboardItem.className = "session-action";
+        dashboardItem.innerHTML = '<a href="empresa-crm.html"><i class="fa-solid fa-chart-line"></i> Painel da empresa</a>';
+        menu.appendChild(dashboardItem);
+      }
+
       const li = document.createElement("li");
       li.className = "session-action";
 
